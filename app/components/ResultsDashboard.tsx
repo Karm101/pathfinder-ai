@@ -62,10 +62,11 @@ export function ResultsDashboard() {
     // Generate skill gap analysis
     const requiredSkills = ROLE_REQUIREMENTS[role] || [];
     const gapData: SkillLevel[] = requiredSkills.map(skill => {
-      const hasSkill = parsedSkills.some((s: string) => 
-        s.toLowerCase() === skill.toLowerCase() || 
-        skill.toLowerCase().includes(s.toLowerCase())
-      );
+      const hasSkill = parsedSkills.some((s: any) => {
+        // This safely extracts the skill name whether it is a string or an object!
+        const skillName = typeof s === 'string' ? s : (s.skill || s.name || s.title || "");
+        return skillName.toLowerCase() === skill.toLowerCase() || skill.toLowerCase().includes(skillName.toLowerCase());
+      });
       return {
         skill,
         current: hasSkill ? 80 + Math.random() * 20 : Math.random() * 30,
