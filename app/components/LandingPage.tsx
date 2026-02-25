@@ -12,6 +12,10 @@ export function LandingPage() {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
+          {/* Project Title */}
+          <h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-6 tracking-widest uppercase shadow-blue-500/50">
+            PathFinder AI
+          </h2>
           <div className="mb-8 inline-flex items-center justify-center p-3 bg-blue-500/10 rounded-full border border-blue-500/20">
             <Brain className="size-12 text-blue-400" />
           </div>
