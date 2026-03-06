@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
@@ -35,22 +35,36 @@ const COMMON_SKILLS = [
   "Azure", "Google Cloud (GCP)", "Terraform", "GraphQL", "Redis", "Spring Boot"
 ];
 
+type Star = { top: string; left: string; size: string; opacity: number };
+
 export function SkillInputForm() {
   const router = useRouter();
   const [targetRole, setTargetRole] = useState("");
   const [currentSkills, setCurrentSkills] = useState<SkillWithRating[]>([]);
   const [skillInput, setSkillInput] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [skillProficiency, setSkillProficiency] = useState([5]);
+  const [skillProficiency, setSkillProficiency] = useState([1]);
   const [hasJobExperience, setHasJobExperience] = useState(false);
   const [yearsOfExperience, setYearsOfExperience] = useState("");
+  const [stars, setStars] = useState<Star[]>([]);
+
+  useEffect(() => {
+    setStars(
+      Array.from({ length: 80 }, () => ({
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        size: Math.random() > 0.85 ? "2px" : "1px",
+        opacity: Math.random() * 0.5 + 0.1,
+      }))
+    );
+  }, []);
 
   const handleAddSkill = (skill: string) => {
     if (skill && !currentSkills.some(s => s.name === skill)) {
       setCurrentSkills([...currentSkills, { name: skill, rating: skillProficiency[0] }]);
       setSkillInput("");
       setShowSuggestions(false);
-      setSkillProficiency([5]); // Reset to default
+      setSkillProficiency([1]);
     }
   };
 
@@ -61,7 +75,6 @@ export function SkillInputForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (targetRole && currentSkills.length > 0) {
-      // Store data in sessionStorage
       sessionStorage.setItem('targetRole', targetRole);
       sessionStorage.setItem('currentSkills', JSON.stringify(currentSkills));
       sessionStorage.setItem('hasJobExperience', hasJobExperience.toString());
@@ -71,39 +84,73 @@ export function SkillInputForm() {
   };
 
   const filteredSuggestions = COMMON_SKILLS.filter(
-    skill => 
-      skill.toLowerCase().includes(skillInput.toLowerCase()) && 
+    skill =>
+      skill.toLowerCase().includes(skillInput.toLowerCase()) &&
       !currentSkills.some(s => s.name === skill)
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
-        <Button 
-          variant="ghost" 
-          onClick={() => router.push('/')}
-          className="text-slate-300 hover:text-white mb-8"
-        >
-          <ArrowLeft className="mr-2 size-4" /> Back to Home
-        </Button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+
+      {/* Starfield */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        {stars.map((star, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              width: star.size, height: star.size,
+              top: star.top, left: star.left, opacity: star.opacity,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 py-8 relative">
+
+        {/* Back button */}
+        <div className="animate-fade-in-up" style={{ animationDelay: "0ms" }}>
+          <Button
+            variant="ghost"
+            onClick={() => router.push('/')}
+            className="text-slate-300 hover:text-white mb-8"
+          >
+            <ArrowLeft className="mr-2 size-4" /> Back to Home
+          </Button>
+        </div>
 
         <div className="max-w-3xl mx-auto">
-          <Card className="bg-slate-800/90 backdrop-blur-sm border-slate-700">
+          <Card
+            className="bg-slate-800/90 backdrop-blur-sm border-slate-700 animate-fade-in-up"
+            style={{ animationDelay: "150ms" }}
+          >
             <CardHeader>
-              <CardTitle className="text-3xl text-white">Build Your Learning Path</CardTitle>
-              <CardDescription className="text-slate-400">
+              <CardTitle
+                className="text-3xl text-white animate-fade-in-up"
+                style={{ animationDelay: "250ms" }}
+              >
+                Build Your Learning Path
+              </CardTitle>
+              <CardDescription
+                className="text-slate-400 animate-fade-in-up"
+                style={{ animationDelay: "350ms" }}
+              >
                 Tell us about your target role and current skills to generate your personalized roadmap
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-8">
+
                 {/* Target Role Selection */}
-                <div className="space-y-3">
+                <div
+                  className="space-y-3 animate-fade-in-up"
+                  style={{ animationDelay: "450ms" }}
+                >
                   <Label htmlFor="target-role" className="text-white text-lg">
                     What's your target IT role?
                   </Label>
                   <Select value={targetRole} onValueChange={setTargetRole}>
-                    <SelectTrigger 
+                    <SelectTrigger
                       id="target-role"
                       className="bg-slate-700 border-slate-600 text-white"
                     >
@@ -111,8 +158,8 @@ export function SkillInputForm() {
                     </SelectTrigger>
                     <SelectContent className="bg-slate-700 border-slate-600">
                       {IT_ROLES.map((role) => (
-                        <SelectItem 
-                          key={role} 
+                        <SelectItem
+                          key={role}
                           value={role}
                           className="text-white focus:bg-slate-600 focus:text-white"
                         >
@@ -124,12 +171,14 @@ export function SkillInputForm() {
                 </div>
 
                 {/* Current Skills Input */}
-                <div className="space-y-3">
+                <div
+                  className="space-y-3 animate-fade-in-up"
+                  style={{ animationDelay: "550ms" }}
+                >
                   <Label htmlFor="current-skills" className="text-white text-lg">
                     What are your current skills?
                   </Label>
-                  
-                  {/* Skill Input */}
+
                   <div className="relative">
                     <Input
                       id="current-skills"
@@ -165,7 +214,10 @@ export function SkillInputForm() {
                   </div>
 
                   {/* Skill Proficiency Slider */}
-                  <div className="space-y-3 pt-2">
+                  <div
+                    className="space-y-3 pt-2 animate-fade-in-up"
+                    style={{ animationDelay: "620ms" }}
+                  >
                     <div className="flex items-center justify-between">
                       <Label htmlFor="skill-proficiency" className="text-white">
                         Skill Proficiency
@@ -190,7 +242,10 @@ export function SkillInputForm() {
                   </div>
 
                   {/* Add Skill Button */}
-                  <div className="pt-2">
+                  <div
+                    className="pt-2 animate-fade-in-up"
+                    style={{ animationDelay: "680ms" }}
+                  >
                     <Button
                       type="button"
                       onClick={() => handleAddSkill(skillInput)}
@@ -227,9 +282,12 @@ export function SkillInputForm() {
                 </div>
 
                 {/* Job Experience Section */}
-                <div className="space-y-4 pt-4 border-t border-slate-700">
+                <div
+                  className="space-y-4 pt-4 border-t border-slate-700 animate-fade-in-up"
+                  style={{ animationDelay: "750ms" }}
+                >
                   <Label className="text-white text-lg">Job Experience</Label>
-                  
+
                   <div className="flex items-center space-x-3">
                     <Checkbox
                       id="job-experience"
@@ -269,7 +327,10 @@ export function SkillInputForm() {
                 </div>
 
                 {/* Submit Button */}
-                <div className="pt-4">
+                <div
+                  className="pt-4 animate-fade-in-up"
+                  style={{ animationDelay: "850ms" }}
+                >
                   <Button
                     type="submit"
                     disabled={!targetRole || currentSkills.length === 0}

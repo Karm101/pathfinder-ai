@@ -1,0 +1,408 @@
+{
+  "Software Engineer": {
+    "sample_count": 41676,
+    "avg_salary": 223678,
+    "salary_by_experience": {
+      "6-10": 222292,
+      "10+": 250356,
+      "3-5": 195755,
+      "0-2": 132389
+    },
+    "salary_by_education": {
+      "Master": 240486,
+      "PhD": 263846,
+      "High School": 180419,
+      "Bachelor": 210167
+    },
+    "salary_by_company_size": {
+      "Enterprise": 255167,
+      "Small": 189640,
+      "Large": 238166,
+      "Medium": 210969
+    },
+    "top_locations": [
+      "New York, United States",
+      "Paris, France",
+      "Mexico City, Mexico",
+      "Bangalore, India",
+      "Tokyo, Japan"
+    ],
+    "employment_type_distribution": {
+      "freelance": 0.2,
+      "internship": 0.2,
+      "part_time": 0.2,
+      "full_time": 0.2,
+      "work_from_home": 0.2
+    },
+    "education_distribution": {
+      "High School": 0.25,
+      "Master": 0.25,
+      "PhD": 0.25,
+      "Bachelor": 0.25
+    },
+    "company_size_distribution": {
+      "Enterprise": 0.25,
+      "Large": 0.25,
+      "Small": 0.25,
+      "Medium": 0.25
+    },
+    "known_skills": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "Git",
+      "REST APIs",
+      "SQL",
+      "Docker",
+      "Agile"
+    ]
+  },
+  "Cloud Engineer": {
+    "sample_count": 41739,
+    "avg_salary": 242827,
+    "salary_by_experience": {
+      "3-5": 214458,
+      "0-2": 149439,
+      "10+": 269898,
+      "6-10": 242027
+    },
+    "salary_by_education": {
+      "Master": 258075,
+      "Bachelor": 230738,
+      "PhD": 282558,
+      "High School": 199143
+    },
+    "salary_by_company_size": {
+      "Enterprise": 273390,
+      "Medium": 231717,
+      "Large": 256900,
+      "Small": 209351
+    },
+    "top_locations": [
+      "Tokyo, Japan",
+      "Dublin, Ireland",
+      "Mexico City, Mexico",
+      "Milan, Italy",
+      "Sao Paulo, Brazil"
+    ],
+    "employment_type_distribution": {
+      "internship": 0.2,
+      "freelance": 0.2,
+      "part_time": 0.2,
+      "full_time": 0.2,
+      "work_from_home": 0.2
+    },
+    "education_distribution": {
+      "PhD": 0.25,
+      "Master": 0.25,
+      "High School": 0.25,
+      "Bachelor": 0.25
+    },
+    "company_size_distribution": {
+      "Enterprise": 0.25,
+      "Medium": 0.25,
+      "Small": 0.25,
+      "Large": 0.25
+    },
+    "known_skills": [
+      "AWS",
+      "Azure",
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "CI/CD",
+      "Linux",
+      "Networking"
+    ]
+  },
+  "UI/UX Designer": {
+    "sample_count": 41842,
+    "avg_salary": 192174,
+    "salary_by_experience": {
+      "10+": 215128,
+      "0-2": 114103,
+      "3-5": 165194,
+      "6-10": 189879
+    },
+    "salary_by_education": {
+      "Master": 205784,
+      "High School": 151865,
+      "PhD": 231312,
+      "Bachelor": 179457
+    },
+    "salary_by_company_size": {
+      "Small": 161848,
+      "Enterprise": 221197,
+      "Medium": 180170,
+      "Large": 204921
+    },
+    "top_locations": [
+      "Singapore, Singapore",
+      "Berlin, Germany",
+      "Toronto, Canada",
+      "Sao Paulo, Brazil",
+      "Mexico City, Mexico"
+    ],
+    "employment_type_distribution": {
+      "internship": 0.2,
+      "full_time": 0.2,
+      "work_from_home": 0.2,
+      "freelance": 0.2,
+      "part_time": 0.2
+    },
+    "education_distribution": {
+      "PhD": 0.25,
+      "Bachelor": 0.25,
+      "Master": 0.25,
+      "High School": 0.25
+    },
+    "company_size_distribution": {
+      "Enterprise": 0.25,
+      "Small": 0.25,
+      "Medium": 0.25,
+      "Large": 0.25
+    },
+    "known_skills": [
+      "Figma",
+      "User Research",
+      "Prototyping",
+      "Design Systems",
+      "HTML/CSS",
+      "Accessibility",
+      "Usability Testing",
+      "Interaction Design"
+    ]
+  },
+  "Business Intelligence Analyst": {
+    "sample_count": 41302,
+    "avg_salary": 191620,
+    "salary_by_experience": {
+      "3-5": 165505,
+      "6-10": 188809,
+      "10+": 215007,
+      "0-2": 115141
+    },
+    "salary_by_education": {
+      "Master": 206093,
+      "PhD": 228978,
+      "High School": 152283,
+      "Bachelor": 178920
+    },
+    "salary_by_company_size": {
+      "Medium": 179920,
+      "Small": 160532,
+      "Large": 203997,
+      "Enterprise": 222257
+    },
+    "top_locations": [
+      "London, United Kingdom",
+      "Berlin, Germany",
+      "Amsterdam, Netherlands",
+      "Dublin, Ireland",
+      "Paris, France"
+    ],
+    "employment_type_distribution": {
+      "freelance": 0.2,
+      "work_from_home": 0.2,
+      "internship": 0.2,
+      "full_time": 0.2,
+      "part_time": 0.2
+    },
+    "education_distribution": {
+      "PhD": 0.25,
+      "High School": 0.25,
+      "Bachelor": 0.25,
+      "Master": 0.25
+    },
+    "company_size_distribution": {
+      "Medium": 0.25,
+      "Large": 0.25,
+      "Small": 0.25,
+      "Enterprise": 0.25
+    },
+    "known_skills": [
+      "SQL",
+      "Power BI",
+      "Tableau",
+      "Python",
+      "Data Modeling",
+      "Excel",
+      "ETL",
+      "Statistics"
+    ]
+  },
+  "Data Scientist": {
+    "sample_count": 41513,
+    "avg_salary": 233262,
+    "salary_by_experience": {
+      "0-2": 140795,
+      "10+": 260543,
+      "6-10": 232296,
+      "3-5": 206506
+    },
+    "salary_by_education": {
+      "Master": 249944,
+      "Bachelor": 220322,
+      "High School": 190235,
+      "PhD": 272710
+    },
+    "salary_by_company_size": {
+      "Large": 247500,
+      "Medium": 220854,
+      "Small": 199579,
+      "Enterprise": 264724
+    },
+    "top_locations": [
+      "Berlin, Germany",
+      "Mexico City, Mexico",
+      "Madrid, Spain",
+      "Dublin, Ireland",
+      "Auckland, New Zealand"
+    ],
+    "employment_type_distribution": {
+      "full_time": 0.2,
+      "internship": 0.2,
+      "part_time": 0.2,
+      "work_from_home": 0.2,
+      "freelance": 0.2
+    },
+    "education_distribution": {
+      "High School": 0.25,
+      "Master": 0.25,
+      "PhD": 0.25,
+      "Bachelor": 0.25
+    },
+    "company_size_distribution": {
+      "Enterprise": 0.25,
+      "Medium": 0.25,
+      "Small": 0.25,
+      "Large": 0.25
+    },
+    "known_skills": [
+      "Python",
+      "SQL",
+      "TensorFlow",
+      "Pandas",
+      "Statistics",
+      "Tableau",
+      "R",
+      "Machine Learning"
+    ]
+  },
+  "Data Analyst": {
+    "sample_count": 41770,
+    "avg_salary": 179691,
+    "salary_by_experience": {
+      "6-10": 176798,
+      "10+": 202172,
+      "0-2": 107298,
+      "3-5": 155646
+    },
+    "salary_by_education": {
+      "PhD": 215493,
+      "Bachelor": 167097,
+      "High School": 143125,
+      "Master": 192226
+    },
+    "salary_by_company_size": {
+      "Small": 150956,
+      "Large": 192349,
+      "Enterprise": 207333,
+      "Medium": 167918
+    },
+    "top_locations": [
+      "Paris, France",
+      "Milan, Italy",
+      "Seoul, South Korea",
+      "Bangalore, India",
+      "Auckland, New Zealand"
+    ],
+    "employment_type_distribution": {
+      "internship": 0.2,
+      "part_time": 0.2,
+      "freelance": 0.2,
+      "full_time": 0.2,
+      "work_from_home": 0.2
+    },
+    "education_distribution": {
+      "PhD": 0.25,
+      "Bachelor": 0.25,
+      "Master": 0.25,
+      "High School": 0.25
+    },
+    "company_size_distribution": {
+      "Enterprise": 0.25,
+      "Medium": 0.25,
+      "Large": 0.25,
+      "Small": 0.25
+    },
+    "known_skills": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Power BI",
+      "Excel",
+      "Statistics",
+      "Data Visualization",
+      "R"
+    ]
+  },
+  "Machine Learning Engineer": {
+    "sample_count": 41769,
+    "avg_salary": 252158,
+    "salary_by_experience": {
+      "10+": 279619,
+      "6-10": 251058,
+      "0-2": 156268,
+      "3-5": 225358
+    },
+    "salary_by_education": {
+      "High School": 207261,
+      "Bachelor": 242389,
+      "PhD": 289875,
+      "Master": 268879
+    },
+    "salary_by_company_size": {
+      "Small": 219388,
+      "Medium": 239967,
+      "Enterprise": 281753,
+      "Large": 266799
+    },
+    "top_locations": [
+      "London, United Kingdom",
+      "Cape Town, South Africa",
+      "Dubai, United Arab Emirates",
+      "Dublin, Ireland",
+      "Auckland, New Zealand"
+    ],
+    "employment_type_distribution": {
+      "work_from_home": 0.2,
+      "freelance": 0.2,
+      "part_time": 0.2,
+      "internship": 0.2,
+      "full_time": 0.2
+    },
+    "education_distribution": {
+      "PhD": 0.25,
+      "High School": 0.25,
+      "Master": 0.25,
+      "Bachelor": 0.25
+    },
+    "company_size_distribution": {
+      "Enterprise": 0.25,
+      "Large": 0.25,
+      "Small": 0.25,
+      "Medium": 0.25
+    },
+    "known_skills": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Machine Learning",
+      "Docker",
+      "Git",
+      "MLOps",
+      "SQL"
+    ]
+  }
+}
